@@ -1,9 +1,16 @@
+import sys
+
 def showMatrix(matrix, label = ''):
     print("\n\n")
     if label:
         print(label, " = ")
     for row in range(len(matrix)):
-        print("\n[ ", sep="", end="")
+        printf("\n[ ")
         for column in range(len(matrix[0])):
-            print(matrix[row][column], " ", sep="", end="")
-        print("]", sep="", end="")
+            printf(str(matrix[row][column]))
+            printf(" ")
+        printf("]")
+
+def printf(message):
+	 sys.stdout.write(message)
+	
