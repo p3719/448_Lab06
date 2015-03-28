@@ -2,17 +2,24 @@ import matInput
 import matMult
 import matTrans
 import matOutput
+import matCheck
 
 def main():
 
     # Get matrices
     matrixA = matInput.getMatrixFromCSV('matrixA.csv')
+    if not matCheck.CheckMatrix(matrixA):
+    	print("MatrixA is not a matrix!")
     matrixB = matInput.getMatrixFromCSV('matrixB.csv')
+    if not matCheck.CheckMatrix(matrixA):
+    	print("MatrixB is not a matrix!")
     
-    menu(matrixA, matrixB)
+    
     exit = False
     while(not exit):
         exit = menu(matrixA, matrixB)
+        
+    
 
 def menu(matrixA = [], matrixB = []):
     # Ask operation
@@ -70,3 +77,5 @@ def menu(matrixA = [], matrixB = []):
     else:
         print("\n\nInvalid operation.\n\n")
     return False
+    
+main()
