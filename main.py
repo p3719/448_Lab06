@@ -3,6 +3,7 @@ import matMult
 import matTrans
 import matOutput
 import matCheck
+import matAdd
 
 def main():
 
@@ -56,7 +57,7 @@ def menu(matrixA = [], matrixB = []):
     elif operation == 2:
         if matrixA and matrixB:
             result = []
-        #    result = matAdd.addition(matrixA, matrixB)
+            result = matAdd.addition(matrixA, matrixB)
             if not result:
                 print("\n\nMatrices cannot be summed.\n\n")
             else:
